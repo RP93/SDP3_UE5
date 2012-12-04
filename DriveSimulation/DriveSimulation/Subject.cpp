@@ -1,14 +1,20 @@
 ///////////////////////////////////////////////////////////////////////////
-// Workfile : Object.cpp
+// Workfile : Subject.cpp
 // Author : Reinhard Penn, Bernhard Selymes
 // Date : 6.11.2012
-// Description : Baseclass with protected constructor
+// Description : Implementation of class Subject
 ///////////////////////////////////////////////////////////////////////////
 
-#include "Object.h"
+#include "Subject.h"
 
-Object::Object() 
-{}
+void Subject::Attach(IObserver*)
+{
+}
 
-Object::~Object() 
-{}
+void Subject::Detach(IObserver*)
+{
+}
+
+void Subject::NotifyObservers()
+{
+}

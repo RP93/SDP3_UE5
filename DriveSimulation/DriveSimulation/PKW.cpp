@@ -1,14 +1,21 @@
 ///////////////////////////////////////////////////////////////////////////
-// Workfile : Object.cpp
+// Workfile : PKW.cpp
 // Author : Reinhard Penn, Bernhard Selymes
 // Date : 6.11.2012
-// Description : Baseclass with protected constructor
+// Description : Implementation of class PKW
 ///////////////////////////////////////////////////////////////////////////
 
-#include "Object.h"
+#include "PKW.h"
 
-Object::Object() 
-{}
+PKW::PKW(RevolutionCounter*)
+{
+}
 
-Object::~Object() 
-{}
+double PKW::GetCurrentSpeed()
+{
+	return 0;
+}
+
+void PKW::Process()
+{
+}

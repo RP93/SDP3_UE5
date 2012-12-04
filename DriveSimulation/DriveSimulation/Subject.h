@@ -1,21 +1,31 @@
 ///////////////////////////////////////////////////////////////////////////
-// Workfile : Object.h
+// Workfile : Subject.h
 // Author : Reinhard Penn, Bernhard Selymes
 // Date : 6.11.2012
-// Description : Header for Object.cpp
+// Description : Header of Subject.cpp
 ///////////////////////////////////////////////////////////////////////////
 
-#ifndef OBJECT_H
-#define OBJECT_H
+#ifndef SUBJECT_H
+#define SUBJECT_H
 
-class Object
+#include "Object.h"
+#include "IObserver.h"
+#include <list>
+
+typedef std::list<IObserver*> TObservers;
+
+class Subject :
+	public Object
 {
 public:
-	//virtual Destructor for baseclass
-	virtual ~Object();
+	void Attach(IObserver*);
+	void Detach(IObserver*);
+
 protected:
-	//Default CTor for baseclass
-	Object();
+	void NotifyObservers();
+
+private:
+	TObservers mObservers;
 };
 
 #endif

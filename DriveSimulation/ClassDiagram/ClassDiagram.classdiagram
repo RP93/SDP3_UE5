@@ -18,20 +18,6 @@ Display anlegen
 new AnalogDisplay</body>
     </comment>
   </ownedCommentsInternal>
-  <profileInstances>
-    <packageHasProfileInstances Id="c7b21f85-292e-47f1-bab5-fbcdd3d8d1af">
-      <profileInstance Id="2a8966fd-eda3-47ae-8b82-fcfcc6b99496" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="de2a434b-98a6-4374-a4c0-69b9679e5704">
-      <profileInstance Id="64908432-08ad-45b3-a8f9-9d939fe72f9e" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <logicalClassDesignerModelHasTypes>
       <class Id="b81d049a-4346-4a28-b242-0638a9fb0b20" name="Object" isAbstract="true" isLeaf="false" isActiveClass="false">
@@ -83,13 +69,23 @@ new AnalogDisplay</body>
           <property Id="2e536f00-b4d8-4745-8e28-057708992688" name="mCurRev" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="35ac19e7-7f13-446d-b7ad-88231a87bf96" />
             <type_NamedElement>
-              <referencedTypeMoniker Id="9851f0ff-f276-40bb-9789-00dbe1b4d7a5" LastKnownName="int" />
+              <referencedTypeMoniker Id="741e9a89-cd5f-434b-a496-e6e7f348b49d" LastKnownName="unsigned int" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation Id="88a4a770-ecc1-44b9-88d1-80a183fffc2e" name="Process" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="b950b82d-f881-4c29-a337-1e2274b93352" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="b8b52cfe-a547-417f-8853-9d5ff76d405a" direction="Return" isUnique="false">
+                  <elementDefinition Id="50976a24-0814-4a6c-a90a-e6b83c665702" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="f84cbb3a-a934-424d-bc43-f677d26a56b6" LastKnownName="void" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
           </operation>
           <operation Id="bc0e4bca-6b62-4184-bfa6-6e7a5c94e196" name="GetCurrentSpeed" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="be1ee891-7011-4ac8-929d-80de20534857" />
@@ -98,7 +94,7 @@ new AnalogDisplay</body>
                 <parameter Id="4580a952-aa96-4b0c-a343-ef378e036631" direction="Return" isUnique="false">
                   <elementDefinition Id="6b942dd1-e58b-425c-bdd7-fe85374a0c25" />
                   <type_NamedElement>
-                    <referencedTypeMoniker Id="4298a316-d539-4cb4-a4a9-0fc88408dc1e" LastKnownName="double" />
+                    <referencedTypeMoniker Id="dcdd0421-f6c7-47b0-a602-787a9d12f5c1" LastKnownName="unsigned double" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -160,7 +156,7 @@ new AnalogDisplay</body>
           <property Id="5fce79db-7889-414e-a154-e0750fb28f0a" name="mCurSpeed" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="3c2edefc-1884-4e29-a361-34f03a2e56dd" />
             <type_NamedElement>
-              <referencedTypeMoniker Id="4298a316-d539-4cb4-a4a9-0fc88408dc1e" LastKnownName="double" />
+              <referencedTypeMoniker Id="4905343b-c860-4f15-a6e7-53ed9ca5a131" LastKnownName="unsigned double" />
             </type_NamedElement>
           </property>
           <property Id="d2009c03-289f-45fb-bbfe-69cc2015b77f" name="mAnalog" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
@@ -240,7 +236,7 @@ new AnalogDisplay</body>
           <property Id="ae8ac96c-2974-4ccb-80b7-b275f3346774" name="mDistance" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="5c797ceb-b710-4c19-b01d-be6cebcc746e" />
             <type_NamedElement>
-              <referencedTypeMoniker Id="4298a316-d539-4cb4-a4a9-0fc88408dc1e" LastKnownName="double" />
+              <referencedTypeMoniker Id="de944940-9177-445f-9ae8-a2e48a68a100" LastKnownName="unsigned double" />
             </type_NamedElement>
           </property>
           <property Id="c1f449fe-4ad4-4c7d-9948-3aef55a58b06" name="mDigital" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
@@ -302,7 +298,7 @@ new AnalogDisplay</body>
                 <parameter Id="b3bb6106-a140-4755-8911-9ee85871c7fc" direction="Return" isUnique="false">
                   <elementDefinition Id="2fdcc49a-e015-4c71-b3fe-43a6d08a7132" />
                   <type_NamedElement>
-                    <referencedTypeMoniker Id="9851f0ff-f276-40bb-9789-00dbe1b4d7a5" LastKnownName="int" />
+                    <referencedTypeMoniker Id="fa80f177-ee08-4a30-a126-7eed3ae5740c" LastKnownName="unsigned int" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -312,8 +308,8 @@ new AnalogDisplay</body>
             <elementDefinition Id="f1718249-ed55-4448-8e58-d1d0def3a219" />
             <ownedParameters>
               <operationHasOwnedParameters>
-                <parameter Id="eb7f5adc-dd07-4da0-87d7-db01846637ec" name="string const&amp;" direction="In" isUnique="false">
-                  <elementDefinition Id="6c1ef4f6-faa4-4c83-b6d1-2cbe6e063df3" />
+                <parameter Id="993bb33f-f619-48c5-84bb-ea23e6a1d60f" name="string const&amp;" direction="In" isUnique="false">
+                  <elementDefinition Id="db7e1b6b-a069-4357-bcb2-0ec163e97aff" />
                 </parameter>
               </operationHasOwnedParameters>
             </ownedParameters>
@@ -365,12 +361,12 @@ new AnalogDisplay</body>
               <associationHasOwnedEnds>
                 <memberEnd Id="793560fd-f016-457e-874d-c2b231d9882b" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
                   <lowerValueInternal>
-                    <literalString Id="a0d9ed4a-f170-4008-b694-845bebf14ac7" name="Lower" value="*">
+                    <literalString Id="a0d9ed4a-f170-4008-b694-845bebf14ac7" name="Lower" value="1">
                       <elementDefinition Id="73d1f8db-fdfa-4d82-990f-824e6011e160" />
                     </literalString>
                   </lowerValueInternal>
                   <upperValueInternal>
-                    <literalString Id="0e71f6a3-20bf-424b-8f52-02f3aac20735" name="Upper" value="*">
+                    <literalString Id="0e71f6a3-20bf-424b-8f52-02f3aac20735" name="Upper" value="1">
                       <elementDefinition Id="100ffc61-debc-4c0f-8a9e-7c3cea3ee2dc" />
                     </literalString>
                   </upperValueInternal>
@@ -379,6 +375,16 @@ new AnalogDisplay</body>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd Id="36581f6c-408c-4574-b496-eb58f43759d9" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="c00c8fc5-3d5a-4406-956a-f08eaebeade2" name="Lower" value="*">
+                      <elementDefinition Id="1c5303d8-7109-4dc9-8e2d-c0ad97332a9a" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="028a92f1-4ee8-4be9-baf1-7f569ed962c0" name="Upper" value="*">
+                      <elementDefinition Id="b9a87120-9326-464b-b3d4-a3caa02a877d" />
+                    </literalString>
+                  </upperValueInternal>
                   <elementDefinition Id="90e67f89-4d25-4530-a8e2-04afb5a8cd8d" />
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -448,11 +454,6 @@ new AnalogDisplay</body>
       </class>
     </logicalClassDesignerModelHasTypes>
     <packageHasNamedElement>
-      <referencedType Id="9851f0ff-f276-40bb-9789-00dbe1b4d7a5" name="int" isAbstract="false" isLeaf="false" cachedFullName="int">
-        <elementDefinition Id="95c7156f-7abf-4e27-add7-d702bf9cd46d" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
       <referencedType Id="4cf9338d-7aa4-4eef-b8be-4d43df974561" name="list&lt;Observer*&gt;" isAbstract="false" isLeaf="false" cachedFullName="list&lt;Observer*&gt;">
         <elementDefinition Id="310fec8b-809b-49ca-a769-614bdfff2438" />
       </referencedType>
@@ -460,11 +461,6 @@ new AnalogDisplay</body>
     <packageHasNamedElement>
       <referencedType Id="ac0500cf-933d-4e71-ad63-60037963bf2a" name="RevolutionCounter*" isAbstract="false" isLeaf="false" cachedFullName="RevolutionCounter*">
         <elementDefinition Id="e937c09a-dbef-4d2f-a44b-46c2e25caf26" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <referencedType Id="4298a316-d539-4cb4-a4a9-0fc88408dc1e" name="double" isAbstract="false" isLeaf="false" cachedFullName="double">
-        <elementDefinition Id="ffcd78d6-0ec8-4073-b6b7-a1357b5daf29" />
       </referencedType>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -482,8 +478,47 @@ new AnalogDisplay</body>
         <elementDefinition Id="1f859359-08a4-4362-a6c5-ffc04f97edb2" />
       </referencedType>
     </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="fa80f177-ee08-4a30-a126-7eed3ae5740c" name="unsigned int" isAbstract="false" isLeaf="false" cachedFullName="unsigned int">
+        <elementDefinition Id="d799f623-7820-495e-a3b6-a65b596f9883" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="dcdd0421-f6c7-47b0-a602-787a9d12f5c1" name="unsigned double" isAbstract="false" isLeaf="false" cachedFullName="unsigned double">
+        <elementDefinition Id="464ddc1c-52b5-449d-a122-0f23a1a2f4c7" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="de944940-9177-445f-9ae8-a2e48a68a100" name="unsigned double" isAbstract="false" isLeaf="false" cachedFullName="unsigned double">
+        <elementDefinition Id="464ddc1c-52b5-449d-a122-0f23a1a2f4c7" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="4905343b-c860-4f15-a6e7-53ed9ca5a131" name="unsigned double" isAbstract="false" isLeaf="false" cachedFullName="unsigned double">
+        <elementDefinition Id="464ddc1c-52b5-449d-a122-0f23a1a2f4c7" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="741e9a89-cd5f-434b-a496-e6e7f348b49d" name="unsigned int" isAbstract="false" isLeaf="false" cachedFullName="unsigned int">
+        <elementDefinition Id="d799f623-7820-495e-a3b6-a65b596f9883" />
+      </referencedType>
+    </packageHasNamedElement>
   </packagedElements>
   <package Id="c85f9079-a224-4b9c-81b4-78b401724e0c" name="ClassDiagram">
     <elementDefinition Id="4a751bce-e078-4f38-9567-82ad6ab77791" />
+    <profileInstances>
+      <packageHasProfileInstances Id="c7b21f85-292e-47f1-bab5-fbcdd3d8d1af">
+        <profileInstance Id="2a8966fd-eda3-47ae-8b82-fcfcc6b99496" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="de2a434b-98a6-4374-a4c0-69b9679e5704">
+        <profileInstance Id="64908432-08ad-45b3-a8f9-9d939fe72f9e" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </logicalClassDesignerModel>

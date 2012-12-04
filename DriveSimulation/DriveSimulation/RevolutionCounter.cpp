@@ -1,14 +1,18 @@
 ///////////////////////////////////////////////////////////////////////////
-// Workfile : Object.cpp
+// Workfile : RevolutionCounter.cpp
 // Author : Reinhard Penn, Bernhard Selymes
 // Date : 6.11.2012
-// Description : Baseclass with protected constructor
+// Description : Implementation of class RevolutionCouter
 ///////////////////////////////////////////////////////////////////////////
 
-#include "Object.h"
+#include "RevolutionCounter.h"
+#include <string>
 
-Object::Object() 
-{}
+RevolutionCounter::RevolutionCounter(std::string const& filename)
+{
+}
 
-Object::~Object() 
-{}
+unsigned int  RevolutionCounter::GetRevolutions() const
+{
+	return 0;
+}

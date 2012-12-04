@@ -154,8 +154,8 @@ new AnalogDisplay</body>
             isComposite="false">
             <type_NamedElement>
               <undefinedTypeMoniker
-                Id="95c7156f-7abf-4e27-add7-d702bf9cd46d"
-                LastKnownName="int"
+                Id="d799f623-7820-495e-a3b6-a65b596f9883"
+                LastKnownName="unsigned int"
                 LastKnownLocation="ClassDiagram.uml" />
             </type_NamedElement>
           </property>
@@ -168,7 +168,23 @@ new AnalogDisplay</body>
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
-            isQuery="false" />
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="50976a24-0814-4a6c-a90a-e6b83c665702"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a1d8bbb0-1451-4098-908d-4f62633c4468"
+                      LastKnownName="void"
+                      LastKnownLocation="ClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
           <operation
             Id="be1ee891-7011-4ac8-929d-80de20534857"
             name="GetCurrentSpeed"
@@ -185,8 +201,8 @@ new AnalogDisplay</body>
                   isUnique="false">
                   <type_NamedElement>
                     <undefinedTypeMoniker
-                      Id="ffcd78d6-0ec8-4073-b6b7-a1357b5daf29"
-                      LastKnownName="double"
+                      Id="464ddc1c-52b5-449d-a122-0f23a1a2f4c7"
+                      LastKnownName="unsigned double"
                       LastKnownLocation="ClassDiagram.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -313,8 +329,8 @@ new AnalogDisplay</body>
             isComposite="false">
             <type_NamedElement>
               <undefinedTypeMoniker
-                Id="ffcd78d6-0ec8-4073-b6b7-a1357b5daf29"
-                LastKnownName="double"
+                Id="464ddc1c-52b5-449d-a122-0f23a1a2f4c7"
+                LastKnownName="unsigned double"
                 LastKnownLocation="ClassDiagram.uml" />
             </type_NamedElement>
           </property>
@@ -483,8 +499,8 @@ new AnalogDisplay</body>
             isComposite="false">
             <type_NamedElement>
               <undefinedTypeMoniker
-                Id="ffcd78d6-0ec8-4073-b6b7-a1357b5daf29"
-                LastKnownName="double"
+                Id="464ddc1c-52b5-449d-a122-0f23a1a2f4c7"
+                LastKnownName="unsigned double"
                 LastKnownLocation="ClassDiagram.uml" />
             </type_NamedElement>
           </property>
@@ -609,8 +625,8 @@ new AnalogDisplay</body>
                   isUnique="false">
                   <type_NamedElement>
                     <undefinedTypeMoniker
-                      Id="95c7156f-7abf-4e27-add7-d702bf9cd46d"
-                      LastKnownName="int"
+                      Id="d799f623-7820-495e-a3b6-a65b596f9883"
+                      LastKnownName="unsigned int"
                       LastKnownLocation="ClassDiagram.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -628,7 +644,7 @@ new AnalogDisplay</body>
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="6c1ef4f6-faa4-4c83-b6d1-2cbe6e063df3"
+                  Id="db7e1b6b-a069-4357-bcb2-0ec163e97aff"
                   name="string const&amp;"
                   direction="In"
                   isUnique="false" />
@@ -738,13 +754,13 @@ new AnalogDisplay</body>
                     <literalString
                       Id="73d1f8db-fdfa-4d82-990f-824e6011e160"
                       name="Lower"
-                      value="*" />
+                      value="1" />
                   </lowerValueInternal>
                   <upperValueInternal>
                     <literalString
                       Id="100ffc61-debc-4c0f-8a9e-7c3cea3ee2dc"
                       name="Upper"
-                      value="*" />
+                      value="1" />
                   </upperValueInternal>
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -757,7 +773,20 @@ new AnalogDisplay</body>
                   isDerived="false"
                   isDerivedUnion="false"
                   aggregation="None"
-                  isComposite="false" />
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="1c5303d8-7109-4dc9-8e2d-c0ad97332a9a"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="b9a87120-9326-464b-b3d4-a3caa02a877d"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
@@ -908,6 +937,16 @@ new AnalogDisplay</body>
       <undefinedType
         Id="1f859359-08a4-4362-a6c5-ffc04f97edb2"
         name="WindowsDisplay*" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="d799f623-7820-495e-a3b6-a65b596f9883"
+        name="unsigned int" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="464ddc1c-52b5-449d-a122-0f23a1a2f4c7"
+        name="unsigned double" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

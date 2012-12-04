@@ -74,6 +74,24 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Milometer.cpp" />
+    <ClCompile Include="Object.cpp" />
+    <ClCompile Include="PKW.cpp" />
+    <ClCompile Include="RevolutionCounter.cpp" />
+    <ClCompile Include="Speedometer.cpp" />
+    <ClCompile Include="Subject.cpp" />
+    <ClCompile Include="WindowsDisplay.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Milometer.h" />
+    <ClInclude Include="Object.h" />
+    <ClInclude Include="IObserver.h" />
+    <ClInclude Include="PKW.h" />
+    <ClInclude Include="RevolutionCounter.h" />
+    <ClInclude Include="Speedometer.h" />
+    <ClInclude Include="Subject.h" />
+    <ClInclude Include="WindowsDisplay.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

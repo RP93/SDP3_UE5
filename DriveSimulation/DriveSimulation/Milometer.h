@@ -1,21 +1,38 @@
 ///////////////////////////////////////////////////////////////////////////
-// Workfile : Object.h
+// Workfile : Milometer.h
 // Author : Reinhard Penn, Bernhard Selymes
-// Date : 6.11.2012
-// Description : Header for Object.cpp
+// Date : 04.12.2012
+// Description : Header for Milometer.cpp
 ///////////////////////////////////////////////////////////////////////////
 
-#ifndef OBJECT_H
-#define OBJECT_H
+#ifndef MILOMETER_H
+#define MILOMETER_H
 
-class Object
+#include "Object.h"
+#include "IObserver.h"
+#include "WindowsDisplay.h"
+#include "PKW.h"
+
+unsigned int const cClock = 2;
+
+class Milometer :
+	public Object,
+	public IObserver
 {
 public:
-	//virtual Destructor for baseclass
-	virtual ~Object();
-protected:
-	//Default CTor for baseclass
-	Object();
+	//CTor
+	Milometer(PKW* pkw);
+
+	//virtual Destructor
+	virtual ~Milometer();
+
+	//virtual update function
+	virtual void Update();
+
+private:
+	WindowsDisplay* mDigital;
+	double mDistance;
+	PKW* mPKW;
 };
 
 #endif

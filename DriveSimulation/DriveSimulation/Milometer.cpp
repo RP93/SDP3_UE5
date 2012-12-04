@@ -1,14 +1,29 @@
 ///////////////////////////////////////////////////////////////////////////
-// Workfile : Object.cpp
+// Workfile : Milometer.cpp
 // Author : Reinhard Penn, Bernhard Selymes
-// Date : 6.11.2012
-// Description : Baseclass with protected constructor
+// Date : 04.12.2012
+// Description : Implemantation of Milometer
 ///////////////////////////////////////////////////////////////////////////
 
-#include "Object.h"
+#include "Milometer.h"
 
-Object::Object() 
-{}
+Milometer::Milometer(PKW* pkw) 
+{
+	mPKW = pkw;
+	mPKW->Attach(this);
 
-Object::~Object() 
-{}
+	mDigital = new DigitalDisplay();
+}
+
+Milometer::~Milometer() 
+{
+	mPKW->Detach(this);
+	delete mDigital;
+}
+
+void Milometer::Update()
+{
+	mDistance = (mPKW->GetCurrentSpeed()/cHourSec)/cClock;
+
+	mDigital->SendValue((unsigned int)mDistance);
+}

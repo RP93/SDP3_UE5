@@ -1,21 +1,36 @@
 ///////////////////////////////////////////////////////////////////////////
-// Workfile : Object.h
+// Workfile : Speedometer.h
 // Author : Reinhard Penn, Bernhard Selymes
-// Date : 6.11.2012
-// Description : Header for Object.cpp
+// Date : 04.12.2012
+// Description : Header for Speedometer.cpp
 ///////////////////////////////////////////////////////////////////////////
 
-#ifndef OBJECT_H
-#define OBJECT_H
+#ifndef SPEEDOMETER_H
+#define SPEEDOMETER_H
 
-class Object
+#include "Object.h"
+#include "IObserver.h"
+#include "WindowsDisplay.h"
+#include "PKW.h"
+
+class Speedometer :
+	public Object,
+	public IObserver
 {
 public:
-	//virtual Destructor for baseclass
-	virtual ~Object();
-protected:
-	//Default CTor for baseclass
-	Object();
+	//CTor
+	Speedometer(PKW* pkw);
+
+	//virtual Destructor
+	virtual ~Speedometer();
+
+	//virtual update function
+	virtual void Update();
+
+private:
+	WindowsDisplay* mAnalog;
+	double mCurSpeed;
+	PKW* mPKW;
 };
 
 #endif

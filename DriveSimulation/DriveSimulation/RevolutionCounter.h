@@ -1,21 +1,25 @@
 ///////////////////////////////////////////////////////////////////////////
-// Workfile : Object.h
+// Workfile : RevolutionCounter.h
 // Author : Reinhard Penn, Bernhard Selymes
 // Date : 6.11.2012
-// Description : Header for Object.cpp
+// Description : Header of RevolutionCounter.cpp
 ///////////////////////////////////////////////////////////////////////////
 
-#ifndef OBJECT_H
-#define OBJECT_H
+#ifndef REVOLUTIONCOUNTER_H
+#define REVOLUTIONCOUNTER_H
 
-class Object
+#include <string>
+#include "Object.h"
+
+class RevolutionCounter :
+	public Object
 {
 public:
-	//virtual Destructor for baseclass
-	virtual ~Object();
-protected:
-	//Default CTor for baseclass
-	Object();
+	RevolutionCounter(std::string const& filename);
+	unsigned int GetRevolutions() const;
+	
+private:
+	std::string mSensorFile;
 };
 
 #endif

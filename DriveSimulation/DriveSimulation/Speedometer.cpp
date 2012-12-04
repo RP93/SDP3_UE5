@@ -1,14 +1,29 @@
 ///////////////////////////////////////////////////////////////////////////
-// Workfile : Object.cpp
+// Workfile : Speedometer.cpp
 // Author : Reinhard Penn, Bernhard Selymes
-// Date : 6.11.2012
-// Description : Baseclass with protected constructor
+// Date : 04.12.2012
+// Description : Implemantation of Speedometer
 ///////////////////////////////////////////////////////////////////////////
 
-#include "Object.h"
+#include "Speedometer.h"
 
-Object::Object() 
-{}
+Speedometer::Speedometer(PKW* pkw) 
+{
+	mPKW = pkw;
+	mPKW->Attach(this);
 
-Object::~Object() 
-{}
+	mAnalog = new AnalogDisplay();
+}
+
+Speedometer::~Speedometer() 
+{
+	mPKW->Detach(this);
+	delete mAnalog;
+}
+
+void Speedometer::Update()
+{
+	mCurSpeed = mPKW->GetCurrentSpeed();
+
+	mAnalog->SendValue((unsigned int)mCurSpeed);
+}
