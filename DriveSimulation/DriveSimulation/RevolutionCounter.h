@@ -9,6 +9,7 @@
 #define REVOLUTIONCOUNTER_H
 
 #include <string>
+#include <fstream>
 #include "Object.h"
 
 class RevolutionCounter :
@@ -19,7 +20,7 @@ public:
 	unsigned int GetRevolutions() const;
 	
 private:
-	std::string mSensorFile;
+	std::ifstream mSensorFile;
 };
 
 #endif

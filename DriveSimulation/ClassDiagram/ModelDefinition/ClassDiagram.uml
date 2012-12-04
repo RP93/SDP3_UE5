@@ -201,8 +201,8 @@ new AnalogDisplay</body>
                   isUnique="false">
                   <type_NamedElement>
                     <undefinedTypeMoniker
-                      Id="464ddc1c-52b5-449d-a122-0f23a1a2f4c7"
-                      LastKnownName="unsigned double"
+                      Id="ffcd78d6-0ec8-4073-b6b7-a1357b5daf29"
+                      LastKnownName="double"
                       LastKnownLocation="ClassDiagram.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -329,8 +329,8 @@ new AnalogDisplay</body>
             isComposite="false">
             <type_NamedElement>
               <undefinedTypeMoniker
-                Id="464ddc1c-52b5-449d-a122-0f23a1a2f4c7"
-                LastKnownName="unsigned double"
+                Id="ffcd78d6-0ec8-4073-b6b7-a1357b5daf29"
+                LastKnownName="double"
                 LastKnownLocation="ClassDiagram.uml" />
             </type_NamedElement>
           </property>
@@ -499,8 +499,8 @@ new AnalogDisplay</body>
             isComposite="false">
             <type_NamedElement>
               <undefinedTypeMoniker
-                Id="464ddc1c-52b5-449d-a122-0f23a1a2f4c7"
-                LastKnownName="unsigned double"
+                Id="ffcd78d6-0ec8-4073-b6b7-a1357b5daf29"
+                LastKnownName="double"
                 LastKnownLocation="ClassDiagram.uml" />
             </type_NamedElement>
           </property>
@@ -602,8 +602,8 @@ new AnalogDisplay</body>
             isComposite="false">
             <type_NamedElement>
               <undefinedTypeMoniker
-                Id="223528e9-37bb-4c76-b89e-31489d66ea71"
-                LastKnownName="string"
+                Id="7e84d102-6445-45c9-a24b-c8f92b82b524"
+                LastKnownName="ifstream"
                 LastKnownLocation="ClassDiagram.uml" />
             </type_NamedElement>
           </property>
@@ -947,6 +947,11 @@ new AnalogDisplay</body>
       <undefinedType
         Id="464ddc1c-52b5-449d-a122-0f23a1a2f4c7"
         name="unsigned double" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="7e84d102-6445-45c9-a24b-c8f92b82b524"
+        name="ifstream" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
