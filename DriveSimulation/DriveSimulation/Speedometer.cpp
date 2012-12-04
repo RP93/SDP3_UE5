@@ -1,0 +1,14 @@
+///////////////////////////////////////////////////////////////////////////
+// Workfile : Object.cpp
+// Author : Reinhard Penn, Bernhard Selymes
+// Date : 6.11.2012
+// Description : Baseclass with protected constructor
+///////////////////////////////////////////////////////////////////////////
+
+#include "Object.h"
+
+Object::Object() 
+{}
+
+Object::~Object() 
+{}
