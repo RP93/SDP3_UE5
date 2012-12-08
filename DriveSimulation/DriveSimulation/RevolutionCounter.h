@@ -17,7 +17,9 @@ class RevolutionCounter :
 {
 public:
 	RevolutionCounter(std::string const& filename);
-	unsigned int GetRevolutions() const;
+	~RevolutionCounter();
+	
+	unsigned int GetRevolutions();
 	
 private:
 	std::ifstream mSensorFile;
