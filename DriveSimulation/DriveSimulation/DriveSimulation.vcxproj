@@ -93,6 +93,9 @@
     <ClInclude Include="Subject.h" />
     <ClInclude Include="WindowsDisplay.h" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="DriveData.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

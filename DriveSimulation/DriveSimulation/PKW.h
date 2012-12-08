@@ -12,12 +12,15 @@
 #include "RevolutionCounter.h"
 
 double const cHourSec = 3.6;
+double const cMinSec = 60;
+double const cWheelDiameter = 0.6;
+double const PI = 3.141592653589793238462;
 
 class PKW :
 	public Subject
 {
 public:
-	PKW(RevolutionCounter*);
+	PKW(RevolutionCounter* revCounter);
 
 	double GetCurrentSpeed();
 	void Process();

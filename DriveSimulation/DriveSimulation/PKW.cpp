@@ -7,15 +7,23 @@
 
 #include "PKW.h"
 
-PKW::PKW(RevolutionCounter*)
+PKW::PKW(RevolutionCounter* revCounter)
 {
+	if(revCounter == 0)
+	{
+		std::string ex = "no valid RevolutionCounter pointer";
+		throw(ex);
+	}
+	mRevCounter = revCounter;
 }
 
 double PKW::GetCurrentSpeed()
 {
-	return 0;
+	return ((mCurRev/cMinSec) * cWheelDiameter * PI * cHourSec);
 }
 
 void PKW::Process()
 {
+	mCurRev = mRevCounter->GetRevolutions();
+	NotifyObservers();
 }
