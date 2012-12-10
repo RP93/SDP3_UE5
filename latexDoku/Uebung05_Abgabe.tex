@@ -43,7 +43,7 @@ commentstyle=\color{dkgreen},       % comment style
 \normalsize
 
 %Pfad zu c++ Dateien
-\newcommand{\CodePath}{../DrivingSimulation/DrivingSimulation/}
+\newcommand{\CodePath}{../DriveSimulation/DriveSimulation/}
 
 %Beginn des Dokuments
 \section{Organisatorisches}
@@ -103,9 +103,9 @@ Eine Software für einen PKW-Prüfstand ist zu entwickeln. Die Software soll Rad
 	\newline
 	Basisklasse für Subjects, die überwacht werden.
 	
-	\item Klasse "Observer":
+	\item Interface "IObserver":
 	\newline
-	Basisklasse für Observer.
+	Interface für Observer.
 	
 	\item Klasse "Speedometer":
 	\newline	
@@ -166,7 +166,7 @@ Ruft von allen Observern Update auf.
 \\
 
 
-\subsection {Interface "Observer"}
+\subsection {Interface "IObserver"}
 Bietet die Schnittstelle für einen Observer. Hat einen virtuellen Destruktor.
 \\
 
@@ -321,7 +321,8 @@ Liest die Daten aus der Daten aus und gibt sie zurück.
 \begin {verbatim}
 Testcase0: File does not exist.
 RevolutionCounter.cpp::RevolutionCounter: error in open file
-Process RevEntries: ... RevolutionCounter.cpp::GetRevolutions: end of data
+Process RevEntries: ... RevolutionCounter.cpp::GetRevolutions: 
+end of data
 Done
 
 
@@ -334,8 +335,8 @@ Process RevEntries: ... Done
 
 
 Testcase3: File with invalid content.
-Process RevEntries: ... RevolutionCounter.cpp::GetRevolutions: conversion string
- to int failed
+Process RevEntries: ... RevolutionCounter.cpp::GetRevolutions: 
+conversion string to int failed
 RevolutionCounter.cpp::GetRevolutions: conversion string to int failed
 RevolutionCounter.cpp::GetRevolutions: conversion string to int failed
 RevolutionCounter.cpp::GetRevolutions: conversion string to int failed
@@ -354,7 +355,8 @@ WindowsClient: Server not online. Waiting...
 WindowsClient: Server not online. Waiting...
 WindowsClient: Server not online. Waiting...
 WindowsClient: Server not online. Waiting...
-Process RevEntries: ... RevolutionCounter.cpp::GetRevolutions: end of data
+Process RevEntries: ... RevolutionCounter.cpp::GetRevolutions: 
+end of data
 RevolutionCounter.cpp::GetRevolutions: end of data
 Done
 
