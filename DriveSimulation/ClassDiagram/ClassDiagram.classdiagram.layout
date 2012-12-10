@@ -131,7 +131,7 @@
         <classShapeMoniker Id="3bad6e1d-7557-4f88-90c9-95ee4806e906" />
       </nodes>
     </generalizationConnector>
-    <associationConnector edgePoints="[(6 : 3.73632811258237); (3.625 : 3.73632811258237)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110" sourceMultiplicity="1" targetMultiplicity="*">
+    <associationConnector edgePoints="[(6 : 3.73632811258237); (4.33333333333333 : 3.73632811258237 : JumpStart); (4.16666666666667 : 3.73632811258237 : JumpEnd); (3.625 : 3.73632811258237)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110" sourceMultiplicity="1" targetMultiplicity="*">
       <associationMoniker Id="f36a4ca5-f953-4bce-85aa-c93f0079b12f" />
       <relativeChildShapes />
       <nodes>

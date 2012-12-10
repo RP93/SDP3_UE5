@@ -70,5 +70,17 @@
     <None Include="DriveData.txt">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="EmptyFile.txt">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="EmptyFile2.txt">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="InvalidDriveData.txt">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SingleDriveData.txt">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
 </Project>

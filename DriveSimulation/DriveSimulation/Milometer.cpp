@@ -9,10 +9,26 @@
 
 Milometer::Milometer(PKW* pkw) 
 {
-	mPKW = pkw;
-	mPKW->Attach(this);
-	mDistance = 0;
-	mDigital = new DigitalDisplay();
+	try
+	{
+		if(pkw == 0)
+		{
+			std::string ex = "no valid pkw pointer";
+			throw(ex);
+		}
+		mPKW = pkw;
+		mPKW->Attach(this);
+		mDistance = 0;
+		mDigital = new DigitalDisplay();
+	}
+	catch(std::string const& ex)
+	{
+		std::cerr << "Milometer.cpp::Milometer: " << ex << std::endl;
+	}
+	catch(...)
+	{
+		std::cerr << "Milometer.cpp::Milometer: Unknown Exception occured" << std::endl;
+	}
 }
 
 Milometer::~Milometer() 

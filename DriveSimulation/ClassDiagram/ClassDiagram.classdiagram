@@ -298,7 +298,7 @@ new AnalogDisplay</body>
                 <parameter Id="b3bb6106-a140-4755-8911-9ee85871c7fc" direction="Return" isUnique="false">
                   <elementDefinition Id="2fdcc49a-e015-4c71-b3fe-43a6d08a7132" />
                   <type_NamedElement>
-                    <referencedTypeMoniker Id="fa80f177-ee08-4a30-a126-7eed3ae5740c" LastKnownName="unsigned int" />
+                    <referencedTypeMoniker Id="b6612e2b-e547-4afa-9c4d-8cb2902469c5" LastKnownName="int" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -474,11 +474,6 @@ new AnalogDisplay</body>
       </referencedType>
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <referencedType Id="fa80f177-ee08-4a30-a126-7eed3ae5740c" name="unsigned int" isAbstract="false" isLeaf="false" cachedFullName="unsigned int">
-        <elementDefinition Id="d799f623-7820-495e-a3b6-a65b596f9883" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
       <referencedType Id="741e9a89-cd5f-434b-a496-e6e7f348b49d" name="unsigned int" isAbstract="false" isLeaf="false" cachedFullName="unsigned int">
         <elementDefinition Id="d799f623-7820-495e-a3b6-a65b596f9883" />
       </referencedType>
@@ -501,6 +496,11 @@ new AnalogDisplay</body>
     <packageHasNamedElement>
       <referencedType Id="26016c5c-2ca9-44c6-b42a-736c2d0ba3a1" name="double" isAbstract="false" isLeaf="false" cachedFullName="double">
         <elementDefinition Id="ffcd78d6-0ec8-4073-b6b7-a1357b5daf29" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="b6612e2b-e547-4afa-9c4d-8cb2902469c5" name="int" isAbstract="false" isLeaf="false" cachedFullName="int">
+        <elementDefinition Id="95c7156f-7abf-4e27-add7-d702bf9cd46d" />
       </referencedType>
     </packageHasNamedElement>
   </packagedElements>

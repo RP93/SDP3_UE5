@@ -9,10 +9,26 @@
 
 Speedometer::Speedometer(PKW* pkw) 
 {
-	mPKW = pkw;
-	mPKW->Attach(this);
+	try
+	{
+		if(pkw == 0)
+		{
+			std::string ex = "no valid pkw pointer";
+			throw(ex);
+		}
+		mPKW = pkw;
+		mPKW->Attach(this);
 
-	mAnalog = new AnalogDisplay();
+		mAnalog = new AnalogDisplay();
+	}
+	catch(std::string const& ex)
+	{
+		std::cerr << "Speedometer.cpp::Speedometer: " << ex << std::endl;
+	}
+	catch(...)
+	{
+		std::cerr << "Speedometer.cpp::Speedometer: Unknown Exception occured" << std::endl;
+	}
 }
 
 Speedometer::~Speedometer() 

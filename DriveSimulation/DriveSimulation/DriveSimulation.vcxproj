@@ -95,6 +95,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="DriveData.txt" />
+    <None Include="EmptyFile.txt" />
+    <None Include="EmptyFile2.txt" />
+    <None Include="InvalidDriveData.txt" />
+    <None Include="SingleDriveData.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

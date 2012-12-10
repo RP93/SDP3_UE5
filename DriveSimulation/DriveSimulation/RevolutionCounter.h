@@ -19,7 +19,7 @@ public:
 	RevolutionCounter(std::string const& filename);
 	~RevolutionCounter();
 	
-	unsigned int GetRevolutions();
+	int GetRevolutions();
 	
 private:
 	std::ifstream mSensorFile;

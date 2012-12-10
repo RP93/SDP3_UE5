@@ -12,11 +12,22 @@
 
 RevolutionCounter::RevolutionCounter(std::string const& filename)
 {
-	mSensorFile.open(filename);
-	if(!mSensorFile.is_open())
+	try
 	{
-		std::string ex = "error in open file";
-		throw(ex);
+		mSensorFile.open(filename);
+		if(!mSensorFile.is_open())
+		{
+			std::string ex = "error in open file";
+			throw(ex);
+		}
+	}
+	catch(std::string const& ex)
+	{
+		std::cerr << "RevolutionCounter.cpp::RevolutionCounter: " << ex << std::endl;
+	}
+	catch(...)
+	{
+		std::cerr << "RevolutionCounter.cpp::RevolutionCounter: Unknown Exception occured" << std::endl;
 	}
 }
 
@@ -25,25 +36,38 @@ RevolutionCounter::~RevolutionCounter()
 	mSensorFile.close();
 }
 
-unsigned int RevolutionCounter::GetRevolutions()
+int RevolutionCounter::GetRevolutions()
 {
-	std::string help;
-	getline(mSensorFile,help);
+	try
+	{
+		std::string help;
+		getline(mSensorFile,help);
 
-	if((help == "-1") || (help == ""))
-	{
-		std::string ex = "end of data";
-		throw(ex);
-	}
+		if((help == "-1") || (help == ""))
+		{
+			std::string ex = "end of data";
+			throw(ex);
+		}
 
-	unsigned int rev = 0;
-	if(std::istringstream(help) >> rev)
-	{
-		return rev;
+		unsigned int rev = 0;
+		if(std::istringstream(help) >> rev)
+		{
+			return rev;
+		}
+		else
+		{
+			std::string ex = "conversion string to int failed";
+			throw(ex);
+		}
 	}
-	else
+	catch(std::string const& ex)
 	{
-		std::string ex = "conversion string to int failed";
-		throw(ex);
+		std::cerr << "RevolutionCounter.cpp::GetRevolutions: " << ex << std::endl;
+		return -1;
+	}
+	catch(...)
+	{
+		std::cerr << "RevolutionCounter.cpp::GetRevolutions: Unknown Exception occured" << std::endl;
+		return -1;
 	}
 }

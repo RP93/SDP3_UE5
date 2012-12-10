@@ -625,8 +625,8 @@ new AnalogDisplay</body>
                   isUnique="false">
                   <type_NamedElement>
                     <undefinedTypeMoniker
-                      Id="d799f623-7820-495e-a3b6-a65b596f9883"
-                      LastKnownName="unsigned int"
+                      Id="95c7156f-7abf-4e27-add7-d702bf9cd46d"
+                      LastKnownName="int"
                       LastKnownLocation="ClassDiagram.uml" />
                   </type_NamedElement>
                 </parameter>

@@ -5,16 +5,29 @@
 // Description : Implementation of class PKW
 ///////////////////////////////////////////////////////////////////////////
 
+#include <iostream>
 #include "PKW.h"
 
 PKW::PKW(RevolutionCounter* revCounter)
 {
-	if(revCounter == 0)
+	try
 	{
-		std::string ex = "no valid RevolutionCounter pointer";
-		throw(ex);
+		if(revCounter == 0)
+		{
+			std::string ex = "no valid RevolutionCounter pointer";
+			throw(ex);
+		}
+		mRevCounter = revCounter;
+
 	}
-	mRevCounter = revCounter;
+	catch(std::string const& ex)
+	{
+		std::cerr << "PKW.cpp::PKW: " << ex << std::endl;
+	}
+	catch(...)
+	{
+		std::cerr << "PKW.cpp::PKW: Unknown Exception occured" << std::endl;
+	}
 }
 
 double PKW::GetCurrentSpeed()
@@ -24,6 +37,11 @@ double PKW::GetCurrentSpeed()
 
 void PKW::Process()
 {
-	mCurRev = mRevCounter->GetRevolutions();
-	NotifyObservers();
+	int tmp = mRevCounter->GetRevolutions();
+
+	if (tmp >= 0)
+	{
+		mCurRev = tmp;
+		NotifyObservers();
+	}
 }
